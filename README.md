@@ -39,11 +39,12 @@ You should see json-20210307.jar listed under your project libraries. Click OK t
 Running the Test Cases
 To run the test cases provided in the testcases folder, ensure you have created a JSON file for each test case following the required format.
 
-04.
+  04 
  Create a folder named testcases in your project directory.
 Add your test case JSON files (e.g., testcase1.json, testcase2.json) into the testcases folder.
 
 05
+
 Run the Project CATALOG
 
 
