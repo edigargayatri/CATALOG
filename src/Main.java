@@ -1,5 +1,3 @@
-
-
 import org.json.JSONObject;
 import org.json.JSONException;
 import org.json.JSONTokener;
@@ -29,13 +27,17 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        try {
-            // Updated the file path to include the 'testcases' directory
-            TestCase testCase = parseJSON("testcases/testcase1.json");
-            BigInteger secret = lagrangeInterpolation(testCase);
-            System.out.println("The secret (constant term c) is: " + secret);
-        } catch (Exception e) {
-            e.printStackTrace();
+        // Array of test case file names
+        String[] testCaseFiles = {"testcases/testcase1.json", "testcases/testcase2.json"};
+
+        for (String testCaseFile : testCaseFiles) {
+            try {
+                TestCase testCase = parseJSON(testCaseFile);
+                BigInteger secret = lagrangeInterpolation(testCase);
+                System.out.println("The secret (constant term c) for " + testCaseFile + " is: " + secret);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
